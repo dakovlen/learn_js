@@ -1,46 +1,52 @@
 
-// let rundomNumber = function getRandomInt() {
-//     return Math.floor(Math.random() * (10 - 1)) + 1;
-// }
+let attempts = 3;
+let programNumber = Math.round(Math.random() * 10);
 
-// console.log(rundomNumber());
+let tempo = document.getElementById('tempo');
+let result = document.getElementById('result');
 
-// let clackBtn = document.getElementById('buttonAdd').onclick = function() {
-//     var val = document.getElementById('answer').value;
-//     document.getElementById('valueString').innerHTML=val;
-// };
+function game() {
+    let answer = document.getElementById('answer').value;
 
+    if(attempts == 0) {
+       result.innerHTML = 'Вы исчерпали все попытки :('
+         return;
+    }
 
-// if (rundomNumber === clackBtn) {
-//     console.log('Победа')
-// } else {
-//     console.log('Проигрыш')
-// }
+    attempts--;
 
-var prNum, tempOut, attempts = 3;
-prNum = Math.round(Math.random() * 10);
+    if (answer == programNumber) {
+       result.innerHTML = 'Вы угадали число загаданное компьютером!!!'
 
-function guessNum() {
-     var num, out;
-
-     num = document.getElementById('mynum').value;
-     out = document.getElementById('out');
-
-     if(attempts == 0) {
-          out.innerHTML = 'Вы исчерпали все попытки'
-          return;
-     }
-
-     attempts--;
-
-     if (num == prNum) {
-         out.innerHTML = 'вы угадали! '
-     } else if (num > 10 || num < 0) {
-         out.innerHTML = 'Введите число от 0 до 10. Осталось попыток:' + attempts
-     } else if (num > prNum) {
-         out.innerHTML = 'Вы ввели число больше! Осталось попыток:' + attempts
-     } else if (num < prNum) {
-         out.innerHTML = 'Вы ввели число меньше!Осталось попыток:' + attempts
-     }
-
+    } else if (answer > 10 || answer < 0) {
+       result.innerHTML = 'Введите число от 0 до 10. Осталось попыток:' + attempts
+    } else if (answer > programNumber) {
+       result.innerHTML = 'Вы ввели число больше! Осталось попыток:' + attempts
+    } else if (answer < programNumber) {
+       result.innerHTML = 'Вы ввели число меньше! Осталось попыток:' + attempts
+    }
 }
+
+btnAdd.addEventListener('click', (e) => {
+    game();
+});
+
+
+
+// let programNumber = Math.floor((Math.random() * 10 ) + 1);
+
+// let buttonAdd = document.getElementById('buttonAdd');
+
+// buttonAdd.addEventListener('click', (e) => {
+//      number = document.getElementById('answer').value;
+//     result = document.getElementById('result');
+
+//     if(number == programNumber){
+//         result.innerHTML = "Вы угадали"
+//     } else if (number > programNumber) {
+//         result.innerHTML = "Вы ввели число больше"
+//     }
+//     else {
+//         result.innerHTML = "Вы ввели число меньше"
+//     }    
+// });
