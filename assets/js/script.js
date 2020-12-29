@@ -27,6 +27,6 @@ for (let i = 0; i < countArticle; i++) {
   let name = article[i].name;
   let readAll = article[i].readAll;
 
-  card.innerHTML = (`<div class="article-content"><img src="${img}"/>` + '<h4>' + name + '</h4>' + `<a href="${readAll}" class="link">Читать</a>`+ '</div>');
+  card.innerHTML += `<div class="article-content"><img src="${img}"/>` + '<h4>' + name + '</h4>' + `<a href="${readAll}" class="link">Читать</a>`+ '</div>';
 }
 
