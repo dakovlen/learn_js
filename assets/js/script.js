@@ -1,52 +1,32 @@
+var article = [
+    {
+        img: 'assets/img/test.webp',
+        name: 'Article Name1',
+        readAll: 'some-link.html',
+    },
 
-let attempts = 3;
-let programNumber = Math.round(Math.random() * 10);
+    {
+        img: 'assets/img/test.webp',
+        name: 'Article Nam2',
+        readAll: 'some-link.html',
+    },
 
-let tempo = document.getElementById('tempo');
-let result = document.getElementById('result');
+    {
+        img: 'assets/img/test.webp',
+        name: 'Article Name3',
+        readAll: 'some-link.html',
+    },
+];
 
-function game() {
-    let answer = document.getElementById('answer').value;
+let card = document.getElementById('card');
 
-    if(attempts == 0) {
-       result.innerHTML = 'Вы исчерпали все попытки :('
-         return;
-    }
+let countArticle = article.length;
 
-    attempts--;
+for (let i = 0; i < countArticle; i++) {
+  let img = article[i].img;
+  let name = article[i].name;
+  let readAll = article[i].readAll;
 
-    if (answer == programNumber) {
-       result.innerHTML = 'Вы угадали число загаданное компьютером!!!'
-
-    } else if (answer > 10 || answer < 0) {
-       result.innerHTML = 'Введите число от 0 до 10. Осталось попыток:' + attempts
-    } else if (answer > programNumber) {
-       result.innerHTML = 'Вы ввели число больше! Осталось попыток:' + attempts
-    } else if (answer < programNumber) {
-       result.innerHTML = 'Вы ввели число меньше! Осталось попыток:' + attempts
-    }
+  card.innerHTML = (`<div class="article-content"><img src="${img}"/>` + '<h4>' + name + '</h4>' + `<a href="${readAll}" class="link">Читать</a>`+ '</div>');
 }
 
-btnAdd.addEventListener('click', (e) => {
-    game();
-});
-
-
-
-// let programNumber = Math.floor((Math.random() * 10 ) + 1);
-
-// let buttonAdd = document.getElementById('buttonAdd');
-
-// buttonAdd.addEventListener('click', (e) => {
-//      number = document.getElementById('answer').value;
-//     result = document.getElementById('result');
-
-//     if(number == programNumber){
-//         result.innerHTML = "Вы угадали"
-//     } else if (number > programNumber) {
-//         result.innerHTML = "Вы ввели число больше"
-//     }
-//     else {
-//         result.innerHTML = "Вы ввели число меньше"
-//     }    
-// });
