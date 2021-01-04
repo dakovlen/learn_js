@@ -18,15 +18,14 @@ var article = [
     },
 ];
 
-let card = document.getElementById('card');
 
-let countArticle = article.length;
+// for (let i = 0; i < article.length; i++) {
+//     console.log(article[i]);
+// }
 
-for (let i = 0; i < countArticle; i++) {
-  let img = article[i].img;
-  let name = article[i].name;
-  let readAll = article[i].readAll;
-
-  card.innerHTML += `<div class="article-content"><img src="${img}"/>` + '<h4>' + name + '</h4>' + `<a href="${readAll}" class="link">Читать</a>`+ '</div>';
-}
-
+article.forEach(function(post){
+    let img = post.img;
+    let name = post.name;
+    let readAll = post.readAll;
+    card.innerHTML += `<div class="article-content"><img src="${img}"/>` + '<h4>' + name + '</h4>' + `<a href="${readAll}" class="link">Читать</a>`+ '</div>';
+});

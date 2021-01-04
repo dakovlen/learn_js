@@ -1,3 +1,18 @@
-input {
-    
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+#card {
+    display: flex;
+
+}
+
+.article-content {
+    flex-grow: 1;
+}
+
+.article-content img {
+    width: 100%;
+    border-radius: 3px;
 }
