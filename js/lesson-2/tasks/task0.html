@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <a href="../../lesson-2/">Повернутись до списку завдань</a>
+  <h1>Задача 0</h1>
+  <p>Обчислити значення виразів</p>
+  <ol>
+    <li>S1=a+12+b</li>
+    <li>S2=a+b2a</li>
+    <li>S3=3(a+b)c</li>
+    <li>S4=sin⁡(a-b)</li>
+  </ol>
+
+  <hr>
+  <p>Рішення:</p>
+  <script>
+      //Вводимо необхідні дані:
+      let a = parseInt(prompt('Введіть значення a', '0'))
+      let b = parseInt(prompt('Введіть значення b', '0'))
+      let c = parseFloat(prompt('Введіть значення c', '0'))
+
+      //Знаходимо обчислення:
+      const s1 = a + 12 + b
+      const s2 = Math.sqrt(( a + b ) / ( 2 * a ))
+      const s3 = Math.cbrt(( a + b ) * c )
+      const s4 = Math.sin( a / ( -b ))
+
+      //Виводимо значення:
+      document.write(`1). S1=a+12+b = ${s1} <br />`)
+      document.write(`2). S2=a+b2a = ${s2} <br />`)
+      document.write(`3). S3=3(a+b)c = ${s2} <br />`)
+      document.write(`4). S4=sin⁡(a-b) = ${s2} <br />`)
+  </script>
+</body>
+</html>
