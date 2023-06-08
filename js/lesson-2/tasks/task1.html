@@ -1,18 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <a href="../../lesson-2/">Повернутись до списку завдань</a>
-  <h1>Задача 1</h1>
-  <p></p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      td {
+        border: 1px solid #333;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="../../lesson-2/">Повернутись до списку завдань</a>
+    <h1>Задача 1</h1>
+    <p>
+      Знайти суму, добуток та частку двох дійсних чисел. Результат вивести у
+      формі таблиці
+    </p>
 
-  <script>
-    
-  </script>
-</body>
+    <script>
+      //Вводимо необхідні дані:
+      const firstNumber = parseFloat(prompt('Ввести перше число:', '0'))
+      const secondNumber = parseFloat(prompt('Ввести друге число:', '0'))
+
+      //Знаходимо обчислення:
+      const sum = firstNumber + secondNumber
+      const multiplication = firstNumber * secondNumber
+      const division = firstNumber / secondNumber
+      //Виводимо значення:
+      document.write(`
+      <table >
+        <tr>
+          <td>Обчислення</td>
+          <td>Результат</td>
+        </tr>
+        <tr>
+          <td>Сума</td>
+          <td>${sum}</td>
+        </tr>
+        <tr>
+          <td>Добуток</td>
+          <td>${multiplication}</td>
+        </tr>
+        <tr>
+          <td>Частка</td>
+          <td>${division}</td>
+        </tr>
+      </table>
+      `)
+    </script>
+  </body>
 </html>
