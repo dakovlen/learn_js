@@ -10,10 +10,19 @@
   <a href="../../lesson-2/">Повернутись до списку завдань</a>
 
   <h1>Задача 7</h1>
+  <p>Знайти суму випадкового номера місяця (від 1 до 12) та випадкового номера дня (від 0 до 6).</p>
   
-
   <script>
-    
-  </script>
+
+    const randomMonth = Math.floor(Math.random() * 12) + 1;
+    const randomDay = Math.floor(Math.random() * 7);
+    const sum = randomMonth + randomDay;
+
+
+    //Виводимо значення:
+    document.write(`Випадковий номер місяця:${randomMonth}<br />`);
+    document.write(`Випадковий номер дня: ${randomDay}<br />`);
+    document.write(`Сума номера місяця та номера дня: ${sum}<br />`);
+</script>
 </body>
 </html>

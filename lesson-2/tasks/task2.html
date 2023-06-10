@@ -9,10 +9,18 @@
 <body>
   <a href="../../lesson-2/">Повернутись до списку завдань</a>
   <h1>Задача 2</h1>
-  <p></p>
+  <p>Дано рік народження (дата: 1 січня) та поточний рік. Знайти кількість років.</p>
 
   <script>
+    //Вводимо необхідні дані:
+      const birthYear = parseInt(prompt("Введіть свій рік народження, будь ласка (наприклад, 1900):"));
+      const currentYear = new Date().getFullYear();
+
+    ///Знаходимо обчислення:
+      const currentAge = currentYear - birthYear;
     
+    //Виводимо значення:
+      document.write(`Кількість років: ${currentAge}`)
   </script>
 </body>
 </html>

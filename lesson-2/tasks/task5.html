@@ -9,10 +9,18 @@
 <body>
   <a href="../../lesson-2/">Повернутись до списку завдань</a>
   <h1>Задача 5</h1>
-  <p></p>
+  <p>Дано кількість секунд, що пройшла від початку доби. Визначити скільки це годин і хвилин.</p>
 
   <script>
+    //Вводимо необхідні дані:
+      const seconds = parseInt(prompt("Введіть кількість секунд:"));
     
+    ///Знаходимо обчислення:
+      const hours = Math.floor(seconds / 3600);
+      const minutes = Math.floor((seconds % 3600) / 60);
+
+    //Виводимо значення:
+    document.write(`${hours}год. ${minutes}хв.`);
   </script>
 </body>
 </html>

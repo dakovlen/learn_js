@@ -1,18 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <a href="../../lesson-2/">Повернутись до списку завдань</a>
-  <h1>Задача 6</h1>
-  <p></p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="../../lesson-2/">Повернутись до списку завдань</a>
+    <h1>Задача 4</h1>
+    <p>
+      З клавіатури вводяться вартість товару та кількість одиниць 3 товарів.
+      Обчислити вартість кожного товару окремо та загальну вартість. Вивести чек
+      (як у супермаркеті) використовуючи елементи розмітки.
+    </p>
 
-  <script>
-    
-  </script>
-</body>
+    <script>
+      //Вводимо необхідні дані:
+      const price1 = parseFloat(prompt("Введіть вартість першого товару:"));
+      const quantity1 = parseInt(prompt("Введіть кількість одиниць першого товару:"));
+
+      const price2 = parseFloat(prompt("Введіть вартість другого товару:"));
+      const quantity2 = parseInt(prompt("Введіть кількість одиниць другого товару:"));
+
+      const price3 = parseFloat(prompt("Введіть вартість третього товару:"));
+      const quantity3 = parseInt(prompt("Введіть кількість одиниць третього товару:"));
+
+      ///Знаходимо обчислення:
+      const total1 = price1 * quantity1;
+      const total2 = price2 * quantity2;
+      const total3 = price3 * quantity3;
+
+      // Обчислення загальної вартості
+      const grandTotal = total1 + total2 + total3;
+      
+      //Виводимо значення:
+      document.write(`
+      <table>
+    <thead>
+      <tr>
+        <td></td>
+        <td>Вартість</td>
+        <td>Кількість</td>
+        <td>Кінцева вартість</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Товар № 1</td>
+        <td>${price1}</td>
+        <td>${quantity1}</td>
+        <td>${total1}</td>
+      </tr>
+      <tr>
+        <td>Товар № 2</td>
+        <td>${price2}</td>
+        <td>${quantity2}</td>
+        <td>${total2}</td>
+      </tr>
+      <tr>
+        <td>Товар № 3</td>
+        <td>${price3}</td>
+        <td>${quantity3}</td>
+        <td>${total3}</td>
+      </tr>
+
+      <tr>
+        <td>Загальна варітсть:</td>
+        <td><strong>${grandTotal}</strong>  </td>
+      </tr>
+    </tbody>
+  </table> 
+      `);
+    </script>
+  </body>
 </html>

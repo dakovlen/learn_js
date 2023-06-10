@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <a href="../../lesson-2/">Повернутись до списку завдань</a>
-  <h1>Задача 3</h1>
-  <p></p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="../../lesson-2/">Повернутись до списку завдань</a>
+    <h1>Задача 3</h1>
+    <p>Дано вартість одиниці товару і кількість. Знайти загальну вартість та ПДВ (5% від загальної вартості).</p>
 
-  <script>
-    
-  </script>
-</body>
+    <script>
+      //Вводимо необхідні дані:
+      const unitPrice = parseFloat(prompt("Введіть вартість одиниці товару:"));
+      const quantity = parseInt(prompt("Введіть кількість товару:"));
+
+     ///Знаходимо обчислення:
+      const totalCost = unitPrice * quantity;
+      const vat = totalCost * 0.05;
+
+      const roundedTotalCost = Math.round(totalCost * 100) / 100;
+      const roundedVat = Math.round(vat * 100) / 100;
+
+      // Вивід загальної вартості та ПДВ
+      document.write(`Загальна вартість:  ${roundedTotalCost} <br />`);
+      document.write(`ПДВ (5%):  ${roundedVat}`);
+    </script>
+  </body>
 </html>
