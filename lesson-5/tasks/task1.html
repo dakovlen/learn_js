@@ -15,10 +15,16 @@
 <body>
   <a href="../../lesson-5/" class="link-list">Повернутись до списку завдань</a>
   <h1>Задача 1</h1>
-  <p></p>
+  <p>Вивести на екран 8 кнопок з написом “Hello”</p>
 
   <script>
+    document.write('<ol>')
 
+    for (let number = 0; number < 8; number++) {
+      document.write('<li><button>Hello!!!</button></li>')
+    }
+
+    document.write('</ol>')
   </script>
 </body>
 

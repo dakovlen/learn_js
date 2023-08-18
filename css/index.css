@@ -27,3 +27,9 @@ a:hover {
 .link-list {
   color: #2fa721;
 }
+
+input {
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid #2fa721;
+}

@@ -15,20 +15,17 @@
 <body>
   <a href="../../lesson-5/" class="link-list">Повернутись до списку завдань</a>
   <h1>Завдання №2</h1>
-  <p>З клавіатури вводиться ціна товару і кількість грошей. Якщо грошей не вистачає то відмовляємо у покупці, інакше,
-    якщо ще залишаються гроші, то пропонуємо купити лотерею за 4 грн.</p>
+  <p>Вивести з використанням циклів маркований список з випадковими числами (1-100). Кількість випадкових чисел вводиться користувачем</p>
 
   <script>
-    //Вводимо необхідні дані:
-    const priceProduct = parseFloat(prompt('ціна товару'))
-    const amountMoney = parseFloat(prompt('кількість грошей'))
-
-    ///Знаходимо обчислення та виводимо значення:
-    if (amountMoney < priceProduct) document.write('Пробачте, у вас не вистачає коштів')
-    else if (amountMoney >= priceProduct) {
-      document.write('Вітаю! ')
-      if (amountMoney - priceProduct >= 4) document.write('Пропоную вам купити лотерею за 4 грн')
+    const valueRundomNumber = parseInt(prompt(`Кількість випадкових чисел`))
+    
+    document.write('<ul>')
+      for(num = 0; num < valueRundomNumber; num ++) {
+      const rundomNumber = 1 + Math.floor(Math.random() * 100 - 1 + 1)
+      document.write(`<li>${rundomNumber}</li>`)  
     }
+    document.write('</ul>')
   </script>
 </body>
 

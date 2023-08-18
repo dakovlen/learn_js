@@ -13,16 +13,17 @@
   <body>
     <a href="../../lesson-5/" class="link-list">Повернутись до списку завдань</a>
     <h1>Завдання № 4</h1>
-    <p>З клавіатури вводиться вік людини. Вивести на екран ким він є (дитиною у садочку, школярем, студентом, працівником, пенсіонером).</p>
+    <p></p>
 
     <script>
-      //Вводимо необхідні дані:
-        const userAge = parseInt(prompt('Введіть свій вік'))
-          if (userAge <= 5) document.write('дитиною у садочку')
-          else if (userAge <= 16 ) document.write('школярем')
-          else if (userAge <= 22 ) document.write('студентом')
-          else if (userAge <= 64 ) document.write('працівником')
-          else document.write('пенсіонером')
+      for (let i = 0; i < 5; i++) {
+        let numberFirst = parseInt(prompt('Num #1:'))
+        let numberSecond = parseInt(prompt('Num #2:'))
+
+        if (numberFirst === numberSecond) document.write(`Sum = ${numberFirst + numberSecond} <br>`)
+        else
+          document.write(`Multiplication = ${numberFirst * numberSecond} <br>`)
+      }
     </script>
   </body>
 </html>

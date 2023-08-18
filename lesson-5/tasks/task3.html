@@ -15,22 +15,13 @@
 <body>
   <a href="../../lesson-5/" class="link-list">Повернутись до списку завдань</a>
   <h1>Завдання № 3</h1>
-  <p>Випадковим чином генерується число від 1 до 5. Спробуйте вгадати число за 2 спроби</p>
+  <p>Створити 10 елементів для введення цін продуктів</p>
 
   <script>
-    //Вводимо необхідні дані:
-    const minValue = 1
-    const maxValue = 5
-
-    let rundomNum = minValue + Math.floor(Math.random() * (maxValue - minValue + 1))
-    let userNumber = parseInt(prompt('Введіть число'))
-
-    if (userNumber === rundomNum) document.write('Winnter')
-    else {
-      userNumber = parseInt(prompt('Введіть число'))
-      if (userNumber === rundomNum) document.write('Winner')
-      else document.write('Not')
+    for (let i = 1; i < 11; i++) {
+      document.write(`<label>Product #${i}</label><br/><input type="text" placeholder="Product ${i}"/> <br>`)
     }
+  
   </script>
 </body>
 
