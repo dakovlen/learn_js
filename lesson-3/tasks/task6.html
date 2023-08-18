@@ -19,28 +19,28 @@
 
   <script>
     //Вводимо необхідні дані:
-    const numberDayWeek = prompt('Введіть номер дня тижня від 1 до 7')
+    const numberDayWeek = parseInt(prompt('Введіть номер дня тижня від 1 до 7'))
     switch (numberDayWeek) {
       case 1:
-        document.write("Понеділок")
+        document.write('Понеділок')
         break
       case 2:
-        document.write("Вівторок")
+        document.write('Вівторок')
         break
       case 3:
-        document.write("Середа")
+        document.write('Середа')
         break
       case 4:
-        document.write("Четвер")
+        document.write('Четвер')
         break
       case 5:
-        document.write("П'ятниця")
+        document.write(`П'ятниця`)
         break
       case 6:
-        document.write("Субота")
+        document.write('Субота')
         break
       case 7:
-        document.write("Неділя")
+        document.write('Неділя')
         break
       default:
         document.write("Невірно введений номер дня тижня.")
