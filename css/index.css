@@ -2,9 +2,18 @@ html {
   font-family: 'Montserrat', sans-serif;
 }
 
-ul {
-  
+ul, 
+ol {
+  margin-bottom: 20px;
   color: #222222;
+}
+
+table {
+  margin-bottom: 20px;
+}
+
+td {
+  border: 1px solid #222222;
 }
 
 ul li, 

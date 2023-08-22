@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../../css/index.css">
+</head>
+
+<body>
+  <a href="../../lesson-6/" class="link-list">Повернутись до списку завдань</a>
+  <h1>Завдання № 4</h1>
+  <p>Інвестор вклав N тис. грн на 20 років під 20% річних. Визначити за допомогою циклів суму, яку він одержить (без оподаткування).</p>
+
+  <script>
+    const initialInvestment = parseFloat(prompt('Введіть сумму яку ви хочете вкласти:', 1000))
+    const annualInterestRate = 0.20
+
+    let currentAmount = initialInvestment
+
+    for (let year = 1; year <= 20; year++) {
+      currentAmount += currentAmount * annualInterestRate
+    }
+
+    document.write(`Сума через 20 років: ${currentAmount.toFixed(2)} грн`)
+  </script>
+</body>
+
+</html>
