@@ -14,22 +14,22 @@
 </head>
 
 <body>
-  <a href="../../lesson-6/" class="link-list">Повернутись до списку завдань</a>
+  <a href="../../lesson-7/" class="link-list">Повернутись до списку завдань</a>
   <h1>Завдання № 6</h1>
   <p>Вивести 5 маркованих списки по 3 числа в кожному</p>
 
   <script>
-    rangeStart = 1
-    rangeEnd = 100
+    // rangeStart = 1
+    // rangeEnd = 100
 
-    for (let i = 0; i < 5; i++) {
-      document.write('<ul>')
-      for (let j = 0; j < 3; j++) {
-        rundomNum = rangeStart + Math.floor(Math.random() * (rangeEnd - rangeStart + 1))
-        document.write(`<li>${rundomNum} </li>`)
-      }
-      document.write('</ul>')
-    }
+    // for (let i = 0; i < 5; i++) {
+    //   document.write('<ul>')
+    //   for (let j = 0; j < 3; j++) {
+    //     rundomNum = rangeStart + Math.floor(Math.random() * (rangeEnd - rangeStart + 1))
+    //     document.write(`<li>${rundomNum} </li>`)
+    //   }
+    //   document.write('</ul>')
+    // }
 
     // //Вивести 4 двовимірні таблиці 5*6
 
@@ -55,14 +55,14 @@
     //   document.write(`<div style="height:20px; width: ${rundNum}%; margin-top: 20px; background-color: red;">${rundNum}</div>`)
     // }
     
-    // for (let startNum = 1, endNum = 10; startNum <= 91; startNum +=10, endNum+=10) {
-    //   document.write(`
-    //     <label>
-    //       ${startNum} - ${endNum}
-    //       <input type="radio" name="text"/>
-    //     </label>
-    //   `)
-    // }
+    for (let startNum = 1, endNum = 10; startNum <= 91; startNum +=10, endNum+=10) {
+      document.write(`
+        <label>
+          ${startNum} - ${endNum}
+          <input type="radio" name="text"/>
+        </label>
+      `)
+    }
     </script>
 </body>
 

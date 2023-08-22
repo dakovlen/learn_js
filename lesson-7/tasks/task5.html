@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../../css/index.css">
+</head>
+
+<body>
+  <a href="../../lesson-7/" class="link-list">Повернутись до списку завдань</a>
+  <h1>Завдання № 5</h1>
+  <p></p>
+
+  <script>
+    const annualInterestRate = 0.20
+    const taxRate = 0.05
+
+    const investedAmount = parseFloat(prompt("Введіть суму вкладених грошей (в тис. грн):"));
+
+    if (investedAmount > 0) {
+      let currentAmount = investedAmount
+
+      for (let year = 1; year <= 20; year++) {
+        const interest = currentAmount * annualInterestRate
+        currentAmount += interest
+      }
+
+      const totalProfit = currentAmount - investedAmount
+      const taxAmount = totalProfit * taxRate
+      const finalAmount = currentAmount - taxAmount
+
+      document.write(`Сума через 20 років з урахуванням податку: ${finalAmount.toFixed(2)} грн`)
+    } else {
+      document.write("Некоректно введена сума вкладених грошей.")
+    }
+
+  </script>
+</body>
+
+</html>

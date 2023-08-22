@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Задача 1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../../css/index.css">
+</head>
+
+<body>
+  <a href="../../lesson-7/" class="link-list">Повернутись до списку завдань</a>
+  <h1>Задача 1</h1>
+  <p>Створити функцію, яка за номером місяця повертає пору року, до якої відноситься цей місяць</p>
+
+  <script>
+    const monthNumber = parseInt(prompt("Введіть номер місяця (1-12):"));
+    const season = getSeason(monthNumber);
+
+    function getSeason(monthNumber) {
+      if (monthNumber >= 1 && monthNumber <= 12) {
+        switch (monthNumber) {
+          case 12:
+          case 1:
+          case 2:
+            return "зима";
+          case 3:
+          case 4:
+          case 5:
+            return "весна";
+          case 6:
+          case 7:
+          case 8:
+            return "літо";
+          case 9:
+          case 10:
+          case 11:
+            return "осінь";
+        }
+      } else {
+        return "Некоректний номер місяця";
+      }
+    }
+
+    document.write(`Місяць номер ${monthNumber} відноситься до пори року: <b>${season}</b>`);
+
+  </script>
+</body>
+
+</html>
