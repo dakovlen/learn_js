@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Задача 1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../../css/index.css">
+</head>
+
+<body>
+  <a href="../../lesson-9/" class="link-list">Повернутись до списку завдань</a>
+  <h1>Задача 1</h1>
+  <p>Користувач вводить кількість елементів. Створити масив, що складається з вказаної кількості елементів заповнених нулями.</p>
+
+  <script>
+    const quantityElem = parseInt(prompt('вводить кількість елементів.'))
+    const arryElement = []
+
+    for (let i = 0; i < quantityElem; i++) {
+      arryElement.push(0)
+    }
+    document.write("Створений масив:", arryElement)
+  </script>
+</body>
+
+</html>

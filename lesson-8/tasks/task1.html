@@ -19,36 +19,44 @@
   <p>Дано масив, який містить оцінки з К предметів. Знайти середній бал і з’ясувати до якої категорії він відноситься (відмінник, двійочник (має хоча би одну двійку), хорошист (оцінки добре і відмінно), трійочник(є хоча би одна трійка)).</p>
 
   <script>
-    let grades = [4, 5, 3, 3, 5, 5, 5, 4, 4, 4, 4, 3]
-
-    function calculateAverage(grades) {
-      let sum = 0
-      for (let grade of grades) {
-        sum += grade
+    
+    function getMinValueArray(arr) {
+      let min = arr[0]
+      
+      for (let i = 1; i < arr.length; i++) {
+        if(arr[i] < min) {
+          min = arr[i]
+        } 
       }
-      return sum / grades.length
+      return min
     }
-
-    function getCategory(average) {
-      if (average === 5) {
-        return "відмінник"
-      } else if (grades.includes(2)) {
-        return "двійочник"
-      } else if (grades.every(grade => grade >= 4)) {
-        return "хорошист"
-      } else if (grades.includes(3)) {
-        return "трійочник"
-      } else {
-        return "інша категорія"
+    
+    function getStudentCategory(scores) {
+      let category
+      switch (getMinValueArray(scores)) {
+        case 1:
+          case 2: 
+            category = 'двійочник'
+            break
+          case 3:
+            category = 'трійочник'
+            break
+          case 4: 
+            category = 'хорошист'
+            break
+          case 5: 
+            category = 'відмінник'
+            break
+          default:
+            throw new Error('некорректна оцінка')
+            break
       }
+      
+      return category
     }
-
-    const averageGrade = calculateAverage(grades).toFixed()
-    const category = getCategory(averageGrade)
-
-    document.write(`Середній бал: ${averageGrade} <br>`)
+    let scores = [4, 5, 3, 3, 5, 5, 5, 4, 4, 4, 4, 3]
+    const category = getStudentCategory(scores)
     document.write(`Категорія: ${category}`)
-
   </script>
 </body>
 
