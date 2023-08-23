@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Задача 1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../../css/index.css">
+</head>
+
+<body>
+  <a href="../../lesson-8/" class="link-list">Повернутись до списку завдань</a>
+  <h1>Задача 1</h1>
+  <p>Дано масив, який містить оцінки з К предметів. Знайти середній бал і з’ясувати до якої категорії він відноситься (відмінник, двійочник (має хоча би одну двійку), хорошист (оцінки добре і відмінно), трійочник(є хоча би одна трійка)).</p>
+
+  <script>
+    let grades = [4, 5, 3, 3, 5, 5, 5, 4, 4, 4, 4, 3]
+
+    function calculateAverage(grades) {
+      let sum = 0
+      for (let grade of grades) {
+        sum += grade
+      }
+      return sum / grades.length
+    }
+
+    function getCategory(average) {
+      if (average === 5) {
+        return "відмінник"
+      } else if (grades.includes(2)) {
+        return "двійочник"
+      } else if (grades.every(grade => grade >= 4)) {
+        return "хорошист"
+      } else if (grades.includes(3)) {
+        return "трійочник"
+      } else {
+        return "інша категорія"
+      }
+    }
+
+    const averageGrade = calculateAverage(grades).toFixed()
+    const category = getCategory(averageGrade)
+
+    document.write(`Середній бал: ${averageGrade} <br>`)
+    document.write(`Категорія: ${category}`)
+
+  </script>
+</body>
+
+</html>

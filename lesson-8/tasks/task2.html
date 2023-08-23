@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../../css/index.css">
+</head>
+
+<body>
+  <a href="../../lesson-8/" class="link-list">Повернутись до списку завдань</a>
+  <h1>Завдання №2</h1>
+  <p>Задача 5. Дано послідовність оцінок учня. Підрахувати кількість:
+    1) двійок
+    2) кількість хороших оцінок (добре, відмінно);
+    3) кількість оцінок, які нижче середнього.</p>
+
+  <script>
+    let grades = [4, 5, 3, 3, 5, 5, 5, 4, 4, 4, 4, 3];
+
+    function countTwos(grades) {
+      let count = 0;
+      for (let grade of grades) {
+        if (grade === 2) {
+          count++;
+        }
+      }
+      return count;
+    }
+
+    function countGoodGrades(grades) {
+      let count = 0;
+      for (let grade of grades) {
+        if (grade >= 4 && grade <= 5) {
+          count++;
+        }
+      }
+      return count;
+    }
+
+    function countBelowAverage(grades) {
+      let average = calculateAverage(grades);
+      let count = 0;
+      for (let grade of grades) {
+        if (grade < average) {
+          count++;
+        }
+      }
+      return count;
+    }
+
+    function calculateAverage(grades) {
+      let sum = 0;
+      for (let grade of grades) {
+        sum += grade;
+      }
+      return sum / grades.length;
+    }
+
+    const twosCount = countTwos(grades);
+    const goodGradesCount = countGoodGrades(grades);
+    const belowAverageCount = countBelowAverage(grades);
+
+    document.write(`Кількість двійок: ${twosCount}<br>`);
+    document.write(`Кількість хороших оцінок: ${goodGradesCount}<br>`);
+    document.write(`Кількість оцінок нижче середнього: ${belowAverageCount}<br>`);
+
+  </script>
+</body>
+
+</html>

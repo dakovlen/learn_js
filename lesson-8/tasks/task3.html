@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../../css/index.css">
+</head>
+
+<body>
+  <a href="../../lesson-8/" class="link-list">Повернутись до списку завдань</a>
+  <h1>Завдання № 3</h1>
+  <p>Створити функцію, яка за номером дня дозволяє з’ясувати чи є цей день робочим</p>
+
+  <script>
+    const gridSize = parseInt(prompt("Введіть розмір сітки (кількість клітинок):"));
+    const shipCount = parseInt(prompt("Введіть кількість одиночних кораблів:"));
+
+    let grid = new Array(gridSize).fill(0); // Створення пустої сітки
+    let remainingShips = shipCount; // Кількість залишених кораблів
+
+    // Розставляння кораблів випадковим чином
+    for (let i = 0; i < shipCount; i++) {
+      let randomCell = Math.floor(Math.random() * gridSize);
+      if (grid[randomCell] === 0) {
+        grid[randomCell] = 1;
+      } else {
+        i--; // Якщо клітинка вже має корабель, спробувати ще раз
+      }
+    }
+
+    while (remainingShips > 0) {
+      const shotCell = parseInt(prompt("Введіть номер клітинки, куди стріляєте (0 - " + (gridSize - 1) + "):"));
+
+      if (grid[shotCell] === 1) {
+        document.write("Ви потопили корабель!");
+        grid[shotCell] = 0; // Видаляємо потоплений корабель з сітки
+        remainingShips--; // Зменшуємо лічильник залишених кораблів
+      } else {
+        document.write("Мимо!");
+      }
+    }
+
+    document.write("Вітаємо! Ви перемогли!");
+
+  </script>
+</body>
+
+</html>
